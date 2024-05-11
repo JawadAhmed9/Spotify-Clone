@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Metas -->
+   <meta charset="utf-8">
+   <title>Mousiqua</title>
+   <meta name="description" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Css -->
+   <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all" />
+   <link href="{{ url_for('static', filename='css/base.css') }}" rel="stylesheet" type="text/css" media="all" />
+   <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet" type="text/css" media="all" />
+   <link href="{{ url_for('static', filename='css/flexslider.css') }}" rel="stylesheet" type="text/css" media="all" />
+   <link href="{{ url_for('static', filename='css/magnific-popup.css') }}" rel="stylesheet" type="text/css"
+      media="all" />
+   <link href="{{ url_for('static', filename='css/fonts.css') }}" rel="stylesheet" type="text/css" media="all" />
+   <link href="http://fonts.googleapis.com/css?family=Dosis:100,300,400,600,700" rel="stylesheet" type="text/css">
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,300,400,400i,600,700,800" rel="stylesheet">
+</head>
+
+<body>
+   <!-- Preloader -->
+   <div class="loader">
+      <!-- Preloader inner -->
+      <div class="loader-inner">
+         <svg width="120" height="220" viewbox="0 0 100 100" class="loading-spinner" version="1.1"
+            xmlns="http://www.w3.org/2000/svg">
+            <circle class="spinner" cx="50" cy="50" r="21" fill="#13181d" stroke-width="2" />
+         </svg>
+      </div>
+      <!-- End preloader inner -->
+   </div>
+   <!-- End preloader-->
+   <!--Wrapper-->
+   <div class="wrapper">
+      <div class="block-search-form">
+         <div class="block-content">
+            <div class="container">
+               <!--end of row-->
+               <div class="row justify-content-center">
+                  <div class="col-12 col-md-10 col-lg-8">
+                     <form method="get">
+                        <div class="card  bg-red ">
+                           <div class="card-body  row no-gutters align-items-center">
+                              <div class="col-auto">
+                                 <i class="icon-search"></i>
+                              </div>
+                              <!--end of col-->
+                              <div class="col">
+                                 <input class="form-control form-control-lg form-control-border0"
+                                    placeholder="Type a keywords..." type="search">
+                              </div>
+                              <!--end of col-->
+
+                              <!--end of col-->
+                           </div>
+                        </div>
+                     </form>
+                  </div>
+                  <!--end of col-->
+               </div>
+               <!--end of row-->
+            </div>
+         </div>
+      </div>
+      <!--Hero section-->
+      <section class="hero">
+         <!--Main slider-->
+         <div class="main-slider slider flexslider">
+            <ul class="slides">
+               <li>
+                  <!-- Example of adjusted image tag in your HTML template -->
+                  <div class="background-img overlay zoom">
+                     <img src="{{ url_for('static', filename='img/1.jpg') }}" alt="">
+                  </div>
+
+                  <!--Container-->
+                  <div class="container hero-content">
+                     <!--Row-->
+                     <div class="row">
+                        <div class="col-sm-12 text-center">
+                           <!--Inner hero-->
+                           <div class="inner-hero">
+                              <div class="back-rect"></div>
+                              <h1 class="large text-white uppercase mb-0">welcome to mousiqua</h1>
+
+                              <div class="front-rect"></div>
+                           </div>
+                        </div>
+                        <!--End row-->
+                     </div>
+                     <!--End container-->
+                  </div>
+                  <!--End inner hero-->
+               </li>
+               <li>
+                  <div class="background-img overlay zoom">
+                     <img src="{{ url_for('static', filename='img/2.jpg') }}" alt="">
+                  </div>
+                  <!--Container-->
+                  <div class="container hero-content">
+                     <!--Row-->
+                     <div class="row">
+                        <div class="col-sm-12 text-center">
+                           <!--Inner hero-->
+                           <div class="inner-hero">
+                              <h1 class="large text-white uppercase mb-0">limitless</h1>
+                              <h5 class="mb-0 text-white uppercase">New Album Available Everywhere</h5>
+                              <a class="video-play-but popup-youtube" href="#"></a>
+                           </div>
+                        </div>
+                        <!--End row-->
+                     </div>
+                     <!--End container-->
+                  </div>
+                  <!--End inner hero-->
+               </li>
+            </ul>
+         </div>
+         <!--End main slider-->
+         <!--Header-->
+         <header class="header default">
+            <div class=" left-part">
+               <a class="logo scroll" href="#wrapper">
+                  <h2 class="mb-0 uppercase">mousiqua.</h2>
+               </a>
+            </div>
+            <div class="right-part">
+               <nav class="main-nav">
+                  <div class="toggle-mobile-but">
+                     <a href="#" class="mobile-but">
+                        <div class="lines"></div>
+                     </a>
+                  </div>
+                  <ul class="main-menu list-inline">
+                     <li><a class="scroll list-inline-item" href="#wrapper">Home</a></li>
+                     <li><a class="scroll list-inline-item" href="#about">about</a></li>
+                     </li>
+                     <li><a class="scroll list-inline-item" href="#contact">Contact</a></li>
+
+                     <li class="block-helper">
+                        <a href="#album" class="scroll"><span><i class="icon-cd-2"></i></span></a>
+                     </li>
+                     <li class="block-helper">
+                        <span class="icon search-ico"><i class="icon-search"></i></span>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </header>
+         <!--End header-->
+      </section>
+      <!--End hero section-->
+
+      <!--Latest album section-->
+
+      <section id="album" class="latest main">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-12 col-md-10 col-lg-9">
+                  <div class="block-content text-center gap-one-bottom-md">
+                     <div class="block-title">
+                        <h1 class="uppercase">Latest album</h1>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-12 col-lg-8 col-md-10">
+                  <div class="block-tracklist">
+                     <audio id="audioPlayer" controls preload="none"></audio>
+                     <div class="block-content pb-0">
+                        <!-- Adjusted image path with url_for -->
+                        <img class="mb-0" src="{{ url_for('static', filename='img/album/5.jpg') }}" alt="Album Cover">
+                     </div>
+                     <ol class="playlist">
+                        {% for song in songs %}
+                        <li class="as-link" onclick="playSong('{{ song }}'); fetchSimilarSongs('{{ song }}')">
+                           <div class="row">
+                              <div class="col-lg-12">
+                                 <div class="block-track">
+                                    <h6 class="mb-0 opc-70 uppercase">{{ song }}</h6>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                        {% endfor %}
+                     </ol>
+                     <!-- Similar Songs Section -->
+                     <div id="similarSongsSection" style="display:none;">
+                        <h3>You may also like</h3>
+                        <ol id="similarSongsList" class="playlist">
+                           <!-- Similar songs will be appended here by fetchSimilarSongs function -->
+                        </ol>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+
+      <script>
+         function playSong(songName) {
+            var player = document.getElementById('audioPlayer');
+            player.src = '/play/' + encodeURIComponent(songName);
+            player.play();
+         }
+         function fetchSimilarSongs(songName) {
+            fetch(`/similar/${encodeURIComponent(songName)}`)
+               .then(response => response.json())
+               .then(data => {
+                  const similarList = document.getElementById('similarSongsList');
+                  similarList.innerHTML = '';  // Clear previous entries
+                  data.forEach(simSong => {
+                     similarList.innerHTML += `
+                    <li class="as-link" onclick="playSong('${simSong}')">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="block-track">
+                                    <h6 class="mb-0 opc-70 uppercase">${simSong}</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                `;
+                  });
+                  document.getElementById('similarSongsSection').style.display = 'block';
+               })
+               .catch(error => console.error('Error fetching similar songs:', error));
+         }
+
+
+      </script>
+
+      <!--End latest album section-->
+
+      <!--Discography section-->
+      <section id="discography" class="discography main">
+         <!--Container-->
+         <div class="container">
+            <!--Row-->
+            <div class="row justify-content-center">
+               <div class="col-12 col-md-10 col-lg-9 ">
+                  <div class="block-content text-center gap-one-bottom-md">
+                     <div class="block-title ">
+                        <h1 class="uppercase">Discography</h1>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--End row-->
+         </div>
+         <!--End container-->
+         <!--Container-->
+         <div class="container">
+            <!--Row-->
+            <div class="row">
+               <div class="col-12 col-md-6 col-lg-3">
+                  <div class="block-album block-content">
+                     <h5 class="mb-0 opc-70 uppercase">Limitless</h5>
+                     <a class="link" href="#">View Album ›</a>
+                     <a href="#">
+                        <img src="{{ url_for('static', filename='img/album/1.jpg') }}" alt="">
+
+
+                     </a>
+                     <ul class="block-social list-inline mb-md-3">
+                        <li class="list-inline-item mr-0"><a href="#"><i class="socicon-apple"></i></a></li>
+                        <li class="list-inline-item mr-0"><a href="#"><i class="socicon-play"></i></a></li>
+                        <li class="list-inline-item mr-0"><a href="#"><i class="socicon-amazon"></i></a></li>
+                        <li class="list-inline-item mr-0"><a href="#"><i class="socicon-soundcloud"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-12 col-md-6 col-lg-3">
+                  <div class="block-album block-content">
+                     <h5 class="mb-0 opc-70 uppercase">Set me free</h5>
+                     <a class="link" href="#">View Album ›</a>
+                     <a href="#">
+                        <img src="{{ url_for('static', filename='img/album/2.jpg') }}" alt="">
+                     </a>
+                     <ul class="block-social list-inline mb-md-3">
+                        <li class="list-inline-item mr-0"><a href="#"><i class="socicon-apple"></i></a></li>
+                        <li class="list-inline-item mr-0"><a href="#"><i class="socicon-play"></i></a></li>
+                        <li class="list-inline-item mr-0"><a href="#"><i class="socicon-amazon"></i></a></li>
+                        <li class="list-inline-item mr-0"><a href="#"><i class="socicon-soundcloud"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-12 col-md-6 col-lg-3">
+                  <div class="block-album block-content">
+                     <h5 class="mb-0 opc-70 uppercase">How It Feels</h5>
+                     <a class="link" href="#">View Album ›</a>
+                     <a href="#">
+                        <img src="{{ url_for('static', filename='img/album/3.jpg') }}" alt="">
+                     </a>
+                     <ul class="block-social list-inline mb-md-3">
+                        <li class="list-inline-item mr-0"><a href="#"><i class="socicon-apple"></i></a></li>
+                        <li class="list-inline-item mr-0"><a href="#"><i class="socicon-play"></i></a></li>
+                        <li class="list-inline-item mr-0"><a href="#"><i class="socicon-amazon"></i></a></li>
+                        <li class="list-inline-item mr-0"><a href="#"><i class="socicon-soundcloud"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-12 col-md-6 col-lg-3">
+                  <div class="block-album block-content">
+                     <h5 class="mb-0 uppercase opc-70">Tonight</h5>
+                     <a class="link" href="#">View Album ›</a>
+                     <a href="#">
+                        <img src="{{ url_for('static', filename='img/album/4.jpg') }}" alt="">
+                     </a>
+                     <ul class="block-social list-inline mb-md-3">
+                        <li class="list-inline-item mr-0"><a href="#"><i class="socicon-apple"></i></a></li>
+                        <li class="list-inline-item mr-0"><a href="#"><i class="socicon-play"></i></a></li>
+                        <li class="list-inline-item mr-0"><a href="#"><i class="socicon-amazon"></i></a></li>
+                        <li class="list-inline-item mr-0"><a href="#"><i class="socicon-soundcloud"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <!--End row-->
+         </div>
+         <!--End container-->
+      </section>
+      <!--End discography section-->
+      <!--Contact section-->
+      <section id="contact" class="contact main bg-secondary">
+         <!--Container-->
+         <div class="container">
+            <!--Row-->
+            <div class="row justify-content-center ">
+               <div class="col-12 col-md-10 col-lg-9">
+                  <div class="block-content  gap-one-bottom-md text-center">
+                     <div class="block-title ">
+                        <h1 class="uppercase">stay in touche</h1>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--End row-->
+         </div>
+         <!--End container-->
+         <!--Container-->
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-12 col-lg-10">
+                  <ul class="feature-list feature-list-sm text-center row">
+                     <li class="col-md-6  col-lg-4">
+                        <div class="card text-center">
+                           <div class="card-body">
+                              <h2 class="uppercase ">Contact</h2>
+                              <p class="mb-0"><em class="uppercase h5 opc-70">Faseeh Iqbal</em>
+                                 352-3209<br>
+                                 contact@mousiqua.net
+                              </p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="col-md-6  col-lg-4">
+                        <div class="card text-center">
+                           <div class="card-body">
+                              <h2 class="uppercase">Press</h2>
+                              <p class="mb-0"><em class="uppercase h5 opc-70">Hassan Rizwan</em>
+                                 352-3209<br>
+                                 press@mousiqua.net
+                              </p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="col-md-6  col-lg-4">
+                        <div class="card text-center">
+                           <div class="card-body">
+                              <h2 class="uppercase ">info</h2>
+                              <p class=" mb-0"><em class="uppercase h5 opc-70">Jawad Ahmed</em>
+                                 352-3209<br>
+                                 info@mousiqua.net
+                              </p>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="row justify-content-center">
+               <div class="col-12">
+                  <ul class="block-social list-inline text-center mt-4">
+                     <li class="list-inline-item">
+                        <a href="#"> <i class="socicon-facebook"></i> </a>
+                     </li>
+                     <li class="list-inline-item">
+                        <a href="#"><i class="socicon-instagram"></i> </a>
+                     </li>
+                     <li class="list-inline-item">
+                        <a href="#"><i class="socicon-twitter"></i> </a>
+                     </li>
+                     <li class="list-inline-item">
+                        <a href="#"><i class="socicon-youtube"></i> </a>
+                     </li>
+                     <li class="list-inline-item">
+                        <a href="#"><i class="socicon-apple"></i> </a>
+                     </li>
+                     <li class="list-inline-item">
+                        <a href="#"><i class="socicon-amazon"></i></a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!--End container-->
+      </section>
+      <!--End contact section-->
+
+   </div>
+   <!-- End wrapper-->
+   <!--Javascript-->
+   <script src="{{ url_for('static', filename='js/jquery-1.12.4.min.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/jquery.flexslider-min.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/smooth-scroll.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/audio.min.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/twitterFetcher_min.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/jquery.countdown.min.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/placeholders.min.js') }}"></script>
+   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+   <!-- Google analytics -->
+   <!-- End google analytics -->
+</body>
+
+</html>
