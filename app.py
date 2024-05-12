@@ -1,6 +1,6 @@
-from flask import abort, Flask, render_template, jsonify, send_from_directory
-from werkzeug.utils import safe_join
+from flask import Flask, jsonify, request, send_from_directory, abort, render_template
 import os
+import random
 
 app = Flask(__name__)
 
@@ -8,15 +8,8 @@ app = Flask(__name__)
 MUSIC_FOLDER = r'C:\Users\PC\Documents\Symmester 4\Big Data\Assignment 4\data\BDS A\000'
 
 
-def get_similar_songs(song_name):
-    # Placeholder for fetching similar songs
-    # Replace this logic with your actual method to retrieve similar songs
-    return [{"name": "Song1"}, {"name": "Song2"}]  # Example format
-
-
 @app.route('/')
 def index():
-    # List mp3 files from the music folder and limit to the first 10
     songs = [song for song in os.listdir(
         MUSIC_FOLDER) if song.endswith('.mp3')][:10]
     return render_template('index.html', songs=songs)
@@ -25,19 +18,26 @@ def index():
 @app.route('/play/<path:filename>')
 def stream_song(filename):
     try:
-        # Ensure the file exists and is an mp3
         if not filename.endswith('.mp3'):
-            abort(404)  # Not found if not an mp3 file
-        filename = safe_join(MUSIC_FOLDER, filename)
+            abort(404)  # Ensure the file is an mp3
+        filename = os.path.join(MUSIC_FOLDER, filename)
         return send_from_directory(os.path.dirname(filename), os.path.basename(filename), as_attachment=False)
     except ValueError:
-        abort(404)  # Not found if file path is unsafe
+        abort(404)  # Handle unsafe file paths
 
 
 @app.route('/similar/<song_name>')
 def similar_songs(song_name):
     similar_songs = get_similar_songs(song_name)
-    return jsonify(similar_songs)  # Convert list of dicts to JSON
+    return jsonify(similar_songs)
+
+
+def get_similar_songs(song_name):
+    all_songs = [song for song in os.listdir(
+        MUSIC_FOLDER) if song.endswith('.mp3') and song != song_name]
+    similar_songs = random.sample(all_songs, min(
+        5, len(all_songs)))
+    return [{"name": song} for song in similar_songs]
 
 
 if __name__ == '__main__':
