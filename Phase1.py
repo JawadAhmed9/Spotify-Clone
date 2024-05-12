@@ -1,3 +1,5 @@
+# phase 1
+
 import os
 import librosa
 import numpy as np
@@ -15,7 +17,7 @@ client = MongoClient('mongodb://localhost:27017/')
 db = client['audio_features']
 collection = db['features']
 
-audio_dir = r'C:\Users\PC\Documents\Symmester 4\Big Data\Assignment 4\data\BDS A\000'
+audio_dir = "/home/jawad/Desktop/BDA_project/data/BDS_A/000"
 
 
 def extract_features(file_path):
